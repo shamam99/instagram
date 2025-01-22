@@ -16,34 +16,42 @@ struct MessyProfileView: View {
                         VStack(spacing: 8) {
                             HStack {
                                   Image("emoji")
-                                    .resizable()
+                                        .resizable()
                                 .scaledToFill()
                                     .frame(width: 80, height: 80)
                             .clipShape(Circle())
-                                      .overlay(
-                                        Circle()    .stroke(Color   .purple, lineWidth: 2)
+                                           .overlay(
+                                        Circle().stroke(Color   .purple, lineWidth: 2)
                                     )
                             .shadow(radius: 3)
                                 Spacer()
                                 VStack {
                                     Text("15")
-                                        .font(.headline)
+                                            .font(.headline)
                                     Text("Posts")
-                                        .font(.caption)
+                                    .font(.caption)
                                 }
+                                
+                                /*                                Spacer()
+                                 VStack(spacing: 2) {
+                                     Text("7,547")
+                                         .font(.headline)
+                                     Text("Followers")
+                                         .font(.caption2)
+                                 }*/
                                   Spacer()
                                 VStack {
                                     Text("7,547")
-                                        .font(.headline)
+                            .font(.headline)
                                     Text("Followers")
-                                        .font(.caption)
+                                          .font(.caption)
                                 }
                                 Spacer()
                                 VStack {
                                     Text("1")
-                                        .font(.headline)
+                            .font(.headline)
                                     Text("Following")
-                                        .font(.caption)
+                                            .font(.caption)
                                 }
                             }
                     .padding(.horizontal)
@@ -74,19 +82,19 @@ struct MessyProfileView: View {
                             */
                             VStack(alignment: .leading, spacing: 4) {
                                 Text("shamam.kafri")
-                                    .font(.headline)
+                                        .font(.headline)
                                 /*
                                 Text("shamam.kafri")
                                     .font(.headline)
                                     .multilineTextAlignment(.center)
                                 */
                                 Text("Adore Your self, and learn swift.")
-                                    .font(.caption)
+                                          .font(.caption)
                                 Text("Apple Academy")
                                     .font(.caption)
-                                    .foregroundColor(.gray)
+                                        .foregroundColor(.gray)
                             }
-                            .frame(maxWidth: .infinity, alignment: .leading)
+                              .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.horizontal)
                         }
                         HStack {
@@ -94,22 +102,22 @@ struct MessyProfileView: View {
                             Text("Following")
                                     .font(.subheadline)
                                 .frame(maxWidth: .infinity)
-                                    .padding(8)
-                                    .background(Color.gray.opacity(0.2))
-                                    .cornerRadius(8)
+                                     .padding(8)
+                                .background(Color.gray.opacity(0.2))
+                                       .cornerRadius(8)
                             }
                             Button(action: {}) {
                                 Text("Message")
                                     .font(.subheadline)
-                                    .frame(maxWidth: .infinity)
+                                .frame(maxWidth: .infinity)
                                     .padding(8)
-                                      .background(Color.gray.opacity(0.2))
+                                        .background(Color.gray.opacity(0.2))
                                     .cornerRadius(8)
                             }
                             Button(action: {}) {
                                   Image(systemName: "chevron.down")
                                     .font(.subheadline)
-                                    .frame(width: 40, height: 40)
+                                       .frame(width: 40, height: 40)
                         .background(Color.gray.opacity(0.2))
                                     .cornerRadius(8)
                             }
@@ -124,13 +132,13 @@ struct MessyProfileView: View {
                         */
                         ScrollView(.horizontal, showsIndicators: false) {
                                   HStack(spacing: 16) {
-                                ForEach(0..<5) { _ in
+                            ForEach(0..<5) { _ in
                                 VStack {
                                         Circle()
-                                            .fill(Color.purple.opacity(0.2))
+                                              .fill(Color.purple.opacity(0.2))
                                             .frame(width: 60, height: 60)
                                         Text("Highlight")
-                                            .font(.caption)
+                                             .font(.caption)
                                     }
                                 }
                             }
@@ -151,11 +159,11 @@ struct MessyProfileView: View {
                             ForEach(1...12, id: \.self) { index in
                                 Rectangle()
                                     .fill(Color.gray.opacity(0.2))
-                                    .frame(height: 120)
+                                       .frame(height: 120)
                                     .overlay(
                                         Text("#\(index)")
                                             .font(.caption)
-                                            .foregroundColor(.gray)
+                                               .foregroundColor(.gray)
                                     )
                             }
                         }
@@ -180,18 +188,18 @@ struct MessyProfileView: View {
                     RoundedRectangle(cornerRadius: 20)
                           .fill(Color.white)
                         .shadow(radius: 5)
-                        .frame(height: 70)
+                             .frame(height: 70)
                     HStack {
                         Spacer()
                     Image(systemName: "house.fill")
                         Spacer()
                     Image(systemName: "magnifyingglass")
-                           Spacer()
-                        Image(systemName: "plus.app")
                               Spacer()
+                        Image(systemName: "plus.app")
+                            Spacer()
                         Image(systemName: "heart")
                     Spacer()
-                        Image(systemName: "person.crop.circle")
+                         Image(systemName: "person.crop.circle")
                     Spacer()
                     }
                 }
@@ -202,14 +210,24 @@ struct MessyProfileView: View {
             .toolbar {
                  ToolbarItem(placement: .navigationBarLeading) {
                     HStack {
-                          Image(systemName: "chevron.left")
-                        Text("shamam.kafri")
-                            .font(.headline)
+                            Image(systemName: "chevron.left")
+                    Text("shamam.kafri")
+                                .font(.headline)
                     }
                 }
+                
+                /*
+                 Image(systemName: "magnifyingglass")
+                           Spacer()
+                     Image(systemName: "plus.app")
+                         Spacer()
+                     Image(systemName: "heart")
+                 Spacer()
+                      Image(systemName: "person.crop.circle")
+                 */
                 ToolbarItem(placement:   .navigationBarTrailing) {
                         HStack(spacing: 16) {
-                        Image(systemName: "bell")
+                                Image(systemName: "bell")
                             Image(systemName: "ellipsis")
                     }
                 }
